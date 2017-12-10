@@ -10,6 +10,9 @@
         <div class="well">
             <input type="button" id="btnLoadEmployees" class="btn btn-success"
                    value="Load Employees" />
+
+            <input type="button" id="btnLogoff" class="btn btn-success pull-right"
+                   value="Log Off" />
         </div>
         <div class="well hidden" id="divData">
             <table class="table table-bordered" id="tblData">
@@ -59,34 +62,48 @@
     <script src="Scripts/bootstrap.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            if (sessionStorage.getItem('accessToken') == null) {
+            if (localStorage.getItem('accessToken') == null) {
                 window.location.href = "Login.html";
             }
+            $('#btnLogoff').click(function () {
+                localStorage.removeItem('accessToken');
+                window.location.href = "Login.html";
+            });
+
             $('#linkClose').click(function () {
                 $('#divError').hide('fade');
             });
+            $('#errorModal').on('hidden.bs.modal', function () {
+                window.location.href = "Login.html";
+            });
             $('#btnLoadEmployees').click(function () {
                 $.ajax({
-                    url: "/api/employees",
+                    url: '/api/employees',
                     method: 'GET',
                     headers: {
-                        'Authorization': 'Windows' + sessionStorage.getItem('accessToken'),
+                        'Authorization': 'Bearer' + localStorage.getItem("accessToken"),
                     },
                     success: function (data) {
                         $('#divData').removeClass('hidden');
+                        $('#tblBody').empty();
                         $.each(data, function (index, value) {
                             var row = $('<tr><td>' + value.ID + '</td><td>'
                                 + value.FIRSTNAME + '</td><td>'
                                 + value.LASTNAME + '</td><td>'
                                 + value.GENDER + '</td><td>'
-                                + value.Salary + '</td><tr>'
+                                + value.SALARY + '</td><tr>'
                                 );
                             $('#tblData').append(row);
                         });
                     },
                     error: function (jqXHR) {
-                        $('#divErrorText').text(jqXHR.responseText);
-                        $('#divError').show('fade');
+                        if (jqXHR.status == "401") {
+                            $('#errorModal').modal('show');
+                        }
+                        else {
+                            $('#divErrorText').text(jqXHR.responseText);
+                            $('#divError').show('fade');
+                          }
                     }
                 });
             });
