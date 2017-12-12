@@ -35,10 +35,10 @@ namespace WebApplication2
             PublicClientId = "self";
             OAuthOptions = new OAuthAuthorizationServerOptions
             {
-                TokenEndpointPath = new PathString("/Token"),
+                TokenEndpointPath = new PathString("/token"),
                 Provider = new ApplicationOAuthProvider(PublicClientId),
                 AuthorizeEndpointPath = new PathString("/api/Account/ExternalLogin"),
-                AccessTokenExpireTimeSpan = TimeSpan.FromSeconds(10),
+                AccessTokenExpireTimeSpan = TimeSpan.FromDays(10),
                 // In production mode set AllowInsecureHttp = false
                 AllowInsecureHttp = true
             };

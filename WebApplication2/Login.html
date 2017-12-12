@@ -66,6 +66,7 @@
                     },
                     success: function (response) {
                         localStorage.setItem('accessToken', response.access_token);
+                        localStorage.setItem('userName', response.username);
                         window.location.href = "Data.html";
                     },
                     error: function (jqXHR) {
