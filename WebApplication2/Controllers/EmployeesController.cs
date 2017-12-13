@@ -11,7 +11,11 @@ namespace WebApplication2.Controllers
     {
         public IEnumerable<EMPLOYEESTABLE> Get()
         {
+<<<<<<< HEAD
             using(myDbConnections entities = new myDbConnections())
+=======
+            using(mydbEntities1 entities = new mydbEntities1())
+>>>>>>> 83a879b99cf47beb07d35186f8cf43d7a832fdcb
             {
                 return entities.EMPLOYEESTABLE.ToList();
             }

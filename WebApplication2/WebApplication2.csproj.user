@@ -4,8 +4,13 @@
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
+<<<<<<< HEAD
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
+=======
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+>>>>>>> 83a879b99cf47beb07d35186f8cf43d7a832fdcb
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <WebStackScaffolding_ControllerDialogWidth>600</WebStackScaffolding_ControllerDialogWidth>
@@ -14,6 +19,10 @@
     <WebStackScaffolding_IsReferencingScriptLibrariesSelected>True</WebStackScaffolding_IsReferencingScriptLibrariesSelected>
     <WebStackScaffolding_LayoutPageFile />
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
+<<<<<<< HEAD
+=======
+    <ProjectView>ShowAllFiles</ProjectView>
+>>>>>>> 83a879b99cf47beb07d35186f8cf43d7a832fdcb
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

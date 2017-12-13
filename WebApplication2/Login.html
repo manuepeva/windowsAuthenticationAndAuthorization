@@ -39,6 +39,7 @@
                     </tr>
                 </tbody>
             </table>
+<<<<<<< HEAD
 
             <table class="table table-bordered">
                 <thead>
@@ -58,6 +59,8 @@
 
                 </tbody>
             </table>
+=======
+>>>>>>> 83a879b99cf47beb07d35186f8cf43d7a832fdcb
             <div id="divError" class="alert alert-danger collapse">
                 <a id="linkClose" class="close" href="#">&times;</a>
                 <div id="divErrorText"></div>
@@ -70,10 +73,13 @@
     <script type="text/javascript">
         $(document).ready(function () {
 
+<<<<<<< HEAD
             $('#btnGoogleLogin').click(function () {
                 window.location.href = "/api/Account/ExternalLogin?provider=Google&response_type=token&client_id=self&redirect_uri=http%3A%2F%2Flocalhost51037%2FLogin.html%2F&state=6Phc_u0Xkj3opJ9TymPhw9olZV_zB6Pjv_OcIfNAprk1";
             });
 
+=======
+>>>>>>> 83a879b99cf47beb07d35186f8cf43d7a832fdcb
             $('#linkClose').click(function () {
                 $('#divError').hide('fade');
             });
@@ -89,9 +95,14 @@
                     },
                     success: function (response) {
                         localStorage.setItem('accessToken', response.access_token);
+<<<<<<< HEAD
                         localStorage.setItem('userName', response.userName);
                         window.location.href = "Data.html";
 
+=======
+                        localStorage.setItem('userName', response.username);
+                        window.location.href = "Data.html";
+>>>>>>> 83a879b99cf47beb07d35186f8cf43d7a832fdcb
                     },
                     error: function (jqXHR) {
                         $('#divErrorText').text(jqXHR.responseText);
