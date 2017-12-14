@@ -13,10 +13,10 @@ namespace WebApplication2
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class mydbEntities1 : DbContext
+    public partial class myDBConnection : DbContext
     {
-        public mydbEntities1()
-            : base("name=mydbEntities1")
+        public myDBConnection()
+            : base("name=myDBConnection")
         {
         }
     

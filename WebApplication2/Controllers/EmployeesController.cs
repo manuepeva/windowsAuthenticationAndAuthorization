@@ -11,9 +11,9 @@ namespace WebApplication2.Controllers
     {
         public IEnumerable<EMPLOYEESTABLE> Get()
         {
-            using(mydbEntities1 entities = new mydbEntities1())
+            using(myDBConnection entities = new myDBConnection())
             {
-                return entities.EMPLOYEESTABLE.ToList();
+                return entities.EMPLOYEESTABLE.ToArray();
             }
         }
     }

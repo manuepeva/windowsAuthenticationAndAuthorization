@@ -233,23 +233,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
-    <Compile Include="employees.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>employees.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="employees.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>employees.tt</DependentUpon>
-    </Compile>
-    <Compile Include="employees.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>employees.edmx</DependentUpon>
-    </Compile>
     <Compile Include="EMPLOYEESTABLE.cs">
-      <DependentUpon>employees.tt</DependentUpon>
+      <DependentUpon>myDBModelConnection.tt</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -257,6 +242,21 @@
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="myDBModelConnection.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>myDBModelConnection.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="myDBModelConnection.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>myDBModelConnection.tt</DependentUpon>
+    </Compile>
+    <Compile Include="myDBModelConnection.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>myDBModelConnection.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
@@ -267,20 +267,20 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Data.html" />
-    <Content Include="employees.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>employees.edmx</DependentUpon>
-      <LastGenOutput>employees.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="employees.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>employees.edmx</DependentUpon>
-      <LastGenOutput>employees.cs</LastGenOutput>
-    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Login.html" />
+    <Content Include="myDBModelConnection.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>myDBModelConnection.edmx</DependentUpon>
+      <LastGenOutput>myDBModelConnection.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="myDBModelConnection.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>myDBModelConnection.edmx</DependentUpon>
+      <LastGenOutput>myDBModelConnection.cs</LastGenOutput>
+    </Content>
     <Content Include="Register.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -306,14 +306,15 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="employees.edmx">
+    <EntityDeploy Include="myDBModelConnection.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>employees.Designer.cs</LastGenOutput>
+      <LastGenOutput>myDBModelConnection.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="employees.edmx.diagram">
-      <DependentUpon>employees.edmx</DependentUpon>
+    <Content Include="myDBModelConnection.edmx.diagram">
+      <DependentUpon>myDBModelConnection.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\GoogleAuthorization.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
