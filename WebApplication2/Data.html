@@ -45,7 +45,11 @@
                         </form>
                     </div>
                     <div class="modal-footer">
+<<<<<<< HEAD
+                        <button type="button" class="btn btn-success" data-dismiss="modal">
+=======
                         <button type="button" data-dismiss="modal" class="btn btn-success">
+>>>>>>> 83a879b99cf47beb07d35186f8cf43d7a832fdcb
                             Close
                         </button>
                     </div>
@@ -83,7 +87,11 @@
                     url: '/api/employees',
                     method: 'GET',
                     headers: {
+<<<<<<< HEAD
+                        'Authorization': 'Bearer' + localStorage.getItem('accessToken'),
+=======
                         'Authorization': 'Bearer' + localStorage.getItem("accessToken"),
+>>>>>>> 83a879b99cf47beb07d35186f8cf43d7a832fdcb
                     },
                     success: function (data) {
                         $('#divData').removeClass('hidden');
@@ -99,7 +107,11 @@
                         });
                     },
                     error: function (jqXHR) {
+<<<<<<< HEAD
+                        if (jqXHR.status == '401') {
+=======
                         if (jqXHR.status == "401") {
+>>>>>>> 83a879b99cf47beb07d35186f8cf43d7a832fdcb
                             $('#errorModal').modal('show');
                         }
                         else {

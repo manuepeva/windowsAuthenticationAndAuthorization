@@ -9,7 +9,11 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
+<<<<<<< HEAD
+    <ProjectGuid>{CB07FCFC-92F9-4D92-9432-9536F6A9E384}</ProjectGuid>
+=======
     <ProjectGuid>{64CDE969-65E2-4DDE-BE6C-7CB8E406F43E}</ProjectGuid>
+>>>>>>> 83a879b99cf47beb07d35186f8cf43d7a832fdcb
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -20,8 +24,13 @@
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
+<<<<<<< HEAD
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+=======
     <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
     <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+>>>>>>> 83a879b99cf47beb07d35186f8cf43d7a832fdcb
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
@@ -231,6 +240,26 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+<<<<<<< HEAD
+    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="EmployeeDataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeeDataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeDataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeeDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeDataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployeeDataModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EMPLOYEESTABLE.cs">
+      <DependentUpon>EmployeeDataModel.tt</DependentUpon>
+=======
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="EMPLOYEESTABLE.cs">
@@ -255,7 +284,18 @@
     <Compile Include="myDBModelConnection.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
+<<<<<<< HEAD
       <DependentUpon>myDBModelConnection.edmx</DependentUpon>
+=======
+      <DependentUpon>employees.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EMPLOYEESTABLE.cs">
+      <DependentUpon>employees.tt</DependentUpon>
+>>>>>>> 83a879b99cf47beb07d35186f8cf43d7a832fdcb
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+>>>>>>> 52b3dad01cd8589ea8343652c6e9a937cc9314d5
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
@@ -267,6 +307,31 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Data.html" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <Content Include="EmployeeDataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EmployeeDataModel.edmx</DependentUpon>
+      <LastGenOutput>EmployeeDataModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EmployeeDataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EmployeeDataModel.edmx</DependentUpon>
+      <LastGenOutput>EmployeeDataModel.cs</LastGenOutput>
+=======
+    <Content Include="employees.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>employees.edmx</DependentUpon>
+      <LastGenOutput>employees.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="employees.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>employees.edmx</DependentUpon>
+      <LastGenOutput>employees.cs</LastGenOutput>
+>>>>>>> 83a879b99cf47beb07d35186f8cf43d7a832fdcb
+    </Content>
+>>>>>>> 52b3dad01cd8589ea8343652c6e9a937cc9314d5
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -306,12 +371,30 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+<<<<<<< HEAD
     <EntityDeploy Include="myDBModelConnection.edmx">
+=======
+<<<<<<< HEAD
+    <EntityDeploy Include="EmployeeDataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EmployeeDataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="EmployeeDataModel.edmx.diagram">
+      <DependentUpon>EmployeeDataModel.edmx</DependentUpon>
+=======
+    <EntityDeploy Include="employees.edmx">
+>>>>>>> 52b3dad01cd8589ea8343652c6e9a937cc9314d5
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>myDBModelConnection.Designer.cs</LastGenOutput>
     </EntityDeploy>
+<<<<<<< HEAD
     <Content Include="myDBModelConnection.edmx.diagram">
       <DependentUpon>myDBModelConnection.edmx</DependentUpon>
+=======
+    <Content Include="employees.edmx.diagram">
+      <DependentUpon>employees.edmx</DependentUpon>
+>>>>>>> 83a879b99cf47beb07d35186f8cf43d7a832fdcb
+>>>>>>> 52b3dad01cd8589ea8343652c6e9a937cc9314d5
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\GoogleAuthorization.js" />
@@ -375,9 +458,15 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
+<<<<<<< HEAD
+          <DevelopmentServerPort>55605</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55605/</IISUrl>
+=======
           <DevelopmentServerPort>50988</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:50988/</IISUrl>
+>>>>>>> 83a879b99cf47beb07d35186f8cf43d7a832fdcb
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
